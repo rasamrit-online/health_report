@@ -5,7 +5,7 @@ from random import uniform as rnd
 from ImageFinder.ImageFinder import get_images_links as find_image
 from streamlit_echarts import st_echarts
 
-st.set_page_config(page_title="Automatic Diet Recommendation", page_icon="💪",layout="wide")
+st.set_page_config(page_title="Automatic Diet Recommendation", page_icon='../Assets/logo.jpg' ,layout="wide")
 
 
 
@@ -240,15 +240,15 @@ class Display:
         
 
 display=Display()
-title="<h1 style='text-align: center;'>Automatic Diet Recommendation</h1>"
+title="<h1 style='text-align: center;'>Quick Health Test</h1>"
 st.markdown(title, unsafe_allow_html=True)
 with st.form("recommendation_form"):
-    st.write("Modify the values and click the Generate button to use")
-    age = st.number_input('Age',min_value=2, max_value=120, step=1)
-    height = st.number_input('Height(cm)',min_value=50, max_value=300, step=1)
-    weight = st.number_input('Weight(kg)',min_value=10, max_value=300, step=1)
+    st.write("Modify the values and click the Generate button to begin")
+    age = st.number_input('Biological Age (yrs)',min_value=2, max_value=120, step=1)
+    height = st.number_input('Body Height (cm)',min_value=50, max_value=300, step=1)
+    weight = st.number_input('Body Weight (kg)',min_value=10, max_value=300, step=1)
     gender = st.radio('Gender',('Male','Female'))
-    activity = st.select_slider('Activity',options=['Little/no exercise', 'Light exercise', 'Moderate exercise (3-5 days/wk)', 'Very active (6-7 days/wk)', 
+    activity = st.select_slider('Activity Level',options=['Little/No Activity', 'Light exercise', 'Moderate exercise (3-5 days/wk)', 'Very active (6-7 days/wk)', 
     'Extra active (very active & physical job)'])
     option = st.selectbox('Choose your weight loss plan:',display.plans)
     st.session_state.weight_loss_option=option

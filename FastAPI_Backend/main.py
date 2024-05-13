@@ -5,7 +5,7 @@ import pandas as pd
 from model import recommend,output_recommended_recipes
 
 
-dataset=pd.read_csv('../Data/dataset.xlsx')
+dataset=pd.read_excel('../Data/dataset.xlsx')
 
 app = FastAPI()
 

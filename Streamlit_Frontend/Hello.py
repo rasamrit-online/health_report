@@ -1,11 +1,10 @@
 import streamlit as st
 
-st.set_page_config(
-    page_title="Hello",
-    page_icon="👋",
-)
+st.set_page_config(page_title="Rasamrit Health",
+                  page_icon='../Assets/logo.jpg',)
 
-st.write("# Welcome to Rasamrit's Diet Recommendation System! 👋")
+
+st.write("# Welcome to Rasamrit's Diet Recommendation System! 🥗")
 
 st.sidebar.success("Select a recommendation app.")
 

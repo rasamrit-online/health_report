@@ -109,10 +109,10 @@ class Display:
                 st.metric(label=plan,value=f'{round(maintain_calories*weight)} Calories/day',delta=loss,delta_color="inverse")
 
     def display_recommendation(self,person,recommendations):
-        st.header('DIET RECOMMENDATOR')  
+        st.header('RASAMRIT DIET RECOMMENDATOR')  
         with st.spinner('Generating recommendations...'): 
             meals=person.meals_calories_perc
-            st.subheader('Recommended recipes:')
+            st.subheader('Recommended Products:')
             for meal_name,column,recommendation in zip(meals,st.columns(len(meals)),recommendations):
                 with column:
                     #st.markdown(f'<div style="text-align: center;">{meal_name.upper()}</div>', unsafe_allow_html=True) 
